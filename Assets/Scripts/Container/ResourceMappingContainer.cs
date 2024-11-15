@@ -18,7 +18,7 @@ namespace Container
         public void SetView(ItemMapping itemMapping)
         {
             DisableItems();
-            for (int i = 0; i < itemMapping.Data.Count; i++)
+            for (int i = 0; i < itemMapping.ItemsCount; i++)
             {
                 _itemViews[i].gameObject.SetActive(true);
                 _itemViews[i].SetSprite(itemMapping.Data[i].Sprite);

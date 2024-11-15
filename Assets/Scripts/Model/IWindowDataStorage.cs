@@ -2,6 +2,6 @@ namespace Model
 {
     public interface IWindowDataStorage
     {
-        bool TryGetWindow(string windowName, out ShopWindowData shopWindowData);
+        bool TryGetData(string windowName, int itemsCount, out ShopWindowData shopWindowData);
     }
 }

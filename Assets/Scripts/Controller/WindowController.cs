@@ -1,4 +1,6 @@
+using Infrastructure;
 using Model;
+using Signals;
 using UnityEngine;
 using View;
 
@@ -13,11 +15,12 @@ namespace Controller
         {
             _view = view;
             _windowDataStorage = windowDataStorage;
+            EventBus.Subscribe<ShowShopWindow>(OnShowWindowButton);
         }
         
-        public void OnShowWindowButton(string windowName)
+        private void OnShowWindowButton(ShowShopWindow signal)
         {
-            if (_windowDataStorage.TryGetWindow(windowName, out var windowData))
+            if (_windowDataStorage.TryGetData(signal.WindowPackName, signal.ItemsCount, out var windowData))
             {
                 _view.SetView(windowData);        
             } 

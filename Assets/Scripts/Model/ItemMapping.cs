@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemMapping : ScriptableObject
 {
     public List<ItemData> Data;
+    public int ItemsCount;
 
     [System.Serializable]
     public class ItemData

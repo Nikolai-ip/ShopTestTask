@@ -25,6 +25,7 @@ namespace View
             else
             {
                 _discountLabel.enabled = false;
+                _discountText.text = "";
                 _priceUI.text = $"${windowData.Price}";
             }
             

@@ -15,15 +15,25 @@ namespace Model
             _loadedWindows = windowData.ToDictionary(data => data.name);
         }
 
-        public bool TryGetWindow(string windowName, out ShopWindowData shopWindowData)
+        public bool TryGetData(string windowName, int itemsCount, out ShopWindowData shopWindowData)
         {
             shopWindowData = null;
             if (_loadedWindows.TryGetValue(windowName, out var window))
             {
                 shopWindowData = window;
+                if (itemsCount < shopWindowData.ItemMapping.Data.Count)
+                {
+                    shopWindowData.ItemMapping.ItemsCount = itemsCount;
+                }
+                else
+                {
+                    shopWindowData.ItemMapping.ItemsCount = shopWindowData.ItemMapping.Data.Count;
+                }
                 return true;
             }
             return false;
         }
+
+
     }
 }
