@@ -1,4 +1,4 @@
-namespace Fabric
+namespace Container
 {
     public interface IResourceMappingContainer
     {

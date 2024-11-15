@@ -3,7 +3,7 @@ using Infrastructure;
 using UnityEngine;
 using View;
 
-namespace Fabric
+namespace Container
 {
     public class ResourceMappingContainer: MonoBehaviour, IResourceMappingContainer
     {
