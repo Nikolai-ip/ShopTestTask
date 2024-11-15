@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Infrastructure;
 using UnityEngine;
-using UnityEngine.Serialization;
 using View;
 
 namespace Fabric

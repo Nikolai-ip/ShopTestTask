@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "ItemMapping", menuName = "ScriptableObjects/ItemMapping")]
 public class ItemMapping : ScriptableObject
